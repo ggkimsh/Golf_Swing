@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>골프 스윙 체크리스트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>골프 스윙 체크리스트</h1>
+        </header>
+        
+        <div class="content-container">
+            <main>
+                <div class="checklist-container">
+                    <div class="phase-container">
+                        <h2>어드레스 (Address)</h2>
+                        <div id="address-checklist" class="checklist"></div>
+                    </div>
+                    
+                    <div class="phase-container">
+                        <h2>백스윙 (Backswing)</h2>
+                        <div id="backswing-checklist" class="checklist"></div>
+                    </div>
+                    
+                    <div class="phase-container">
+                        <h2>다운스윙 (Downswing)</h2>
+                        <div id="downswing-checklist" class="checklist"></div>
+                    </div>
+                    
+                    <div class="phase-container">
+                        <h2>임팩트 (Impact)</h2>
+                        <div id="impact-checklist" class="checklist"></div>
+                    </div>
+                    
+                    <div class="phase-container">
+                        <h2>팔로우스루 (Follow-through)</h2>
+                        <div id="followthrough-checklist" class="checklist"></div>
+                    </div>
+                </div>
+                
+                <div class="add-item-container">
+                    <input type="text" id="new-item-input" placeholder="새로운 체크 항목 추가">
+                    <select id="phase-select">
+                        <option value="address">어드레스</option>
+                        <option value="backswing">백스윙</option>
+                        <option value="downswing">다운스윙</option>
+                        <option value="impact">임팩트</option>
+                        <option value="followthrough">팔로우스루</option>
+                    </select>
+                    <button id="add-item-btn">추가</button>
+                </div>
+            </main>
+
+            <aside class="video-container">
+                <h2>이상적인 스윙 모션</h2>
+                <div class="video-wrapper">
+                    <video id="swing-video" controls loop playbackRate="0.25">
+                        <source src="https://storage.googleapis.com/aihub-golf/perfect_swing.mp4" type="video/mp4">
+                        브라우저가 비디오를 지원하지 않습니다.
+                    </video>
+                </div>
+                <div class="video-controls">
+                    <button id="playback-speed" onclick="togglePlaybackSpeed()">재생 속도: 0.25x</button>
+                    <button id="loop-toggle" onclick="toggleLooping()">반복 재생: ON</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
